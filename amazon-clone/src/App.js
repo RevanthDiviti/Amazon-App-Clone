@@ -1,15 +1,31 @@
+import React from "react";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+const MainPage = () => (
+  <>
+    <Header />
+    <Home />
+  </>
+);
+const CheckOut = () => (
+  <>
+    <h1>I AM A CHECKOUT, SMASH THE LIKE BUTTON </h1>
+  </>
+);
 
 function App() {
   return (
-    //BEM Naming Convention
-    <div className="App">
-      {/* <h1>Hello Revanth Mudiraj, Jai Shree Ram🚩</h1> */}
-      <Header />
-      <Home />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/" element={<MainPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
