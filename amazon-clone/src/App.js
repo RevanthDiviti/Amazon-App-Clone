@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Checkout from "./Checkout";
 
 const MainPage = () => (
   <>
@@ -12,7 +13,8 @@ const MainPage = () => (
 );
 const CheckOut = () => (
   <>
-    <h1>I AM A CHECKOUT, SMASH THE LIKE BUTTON </h1>
+    <Header/>
+    <Checkout />
   </>
 );
 
